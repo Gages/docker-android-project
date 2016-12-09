@@ -56,4 +56,4 @@ ENV TERM dumb
 # Which automatically downloads the correct version of gradle
 
 # Load licenses
-COPY licences $ANDROID_HOME
+COPY licenses $ANDROID_HOME/licenses
