@@ -9,7 +9,7 @@ with gradle.
 * Android SDK
 * Android Support Libraries
 * Google Play Services
-# Gradle 2.14.1
+* Gradle 2.14.1
 
 ## Maintainance
 

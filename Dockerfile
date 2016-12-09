@@ -53,7 +53,7 @@ RUN ( while [ 1 ]; do sleep 5; echo y; done ) | \
 # 2. To use a specific version, 2.14.1
 # This section is based on the instructions at: https://docs.gradle.org/current/userguide/installation.html
 
-ARG GRADLE_BIN_URL=https://services.gradle.org/distributions/gradle-2.14.1-bin.zip
+ARG GRADLE_BIN_URL=https://downloads.gradle.org/distributions/gradle-2.14.1-bin.zip
 ARG GRADLE_BIN_CHECKSUM=7c0b10e8c074d9481620f3aa2b6fb88f78da89c9
 
 ENV GRADLE_HOME /usr/local/gradle-2.14.1
