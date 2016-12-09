@@ -1,7 +1,7 @@
 # Dockerfile for Android Projects
 
-This is a Dockerfile to make minimum images for Android projects.
-No `ant`, `maven`, nor `android-ndk` are included.
+This is a Dockerfile created specifically for headlessly building Android projects
+with gradle.
 
 ## Included
 
@@ -9,6 +9,7 @@ No `ant`, `maven`, nor `android-ndk` are included.
 * Android SDK
 * Android Support Libraries
 * Google Play Services
+# Gradle 2.14.1
 
 ## Maintainance
 
