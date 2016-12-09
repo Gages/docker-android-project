@@ -16,15 +16,12 @@ No `ant`, `maven`, nor `android-ndk` are included.
 * Update components for major updates
   * You can find component ids by `android list sdk --all --extended`
 
-# Author
-
-FUJI Goro (gfx) <g.psy.va+github@gmail.com>
-
 # License
 
 The MIT License.
 
-Copyright (c) 2015 FUJI Goro <g.psy.va+github@gmail.com>.
+Original work Copyright (c) 2015 FUJI Goro <g.psy.va+github@gmail.com>.
+Modified work Copyright (c) 2016 Phillip Warren <phillip.warren@gmail.com>.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
