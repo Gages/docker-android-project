@@ -1,15 +1,23 @@
 # Dockerfile for Android Projects
 
-This is a Dockerfile created specifically for headlessly building Android projects
-with gradle.
+This is a Dockerfile created specifically for headlessly building Android projects.
+Your Andriod project might include a ./gradlew file. If so, you can compile the project
+by running ./gradlew assembleDebug.
 
+Gradle can download the necessary android packages that your project depends on,
+but it can't (chooses not to) "accept" the licenses for them on its own.
+To solve this problem (and enable fully automated builds) this
+dockerfile includes a section for "accepting" the current licenses ahead of time,
+automatically.
+
+You should therefore read the licenses at <insert url here> before using this dockerfile.
+ 
 ## Included
 
 * OpenJDK 8
 * Android SDK
 * Android Support Libraries
 * Google Play Services
-* Gradle 2.14.1
 
 ## Maintainance
 

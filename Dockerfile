@@ -48,25 +48,12 @@ RUN ( while [ 1 ]; do sleep 5; echo y; done ) | \
     android update sdk --no-ui --all --filter "${ANDROID_PACKAGES}" && \
 	rm -rf "${ANDROID_HOME}/temp"
 
-# Preinstalling Gradle:
-# 1. To save time in CI
-# 2. To use a specific version, 2.14.1
-# This section is based on the instructions at: https://docs.gradle.org/current/userguide/installation.html
-
-ARG GRADLE_BIN_URL=https://downloads.gradle.org/distributions/gradle-2.14.1-bin.zip
-ARG GRADLE_BIN_CHECKSUM=7c0b10e8c074d9481620f3aa2b6fb88f78da89c9
-
-ENV GRADLE_HOME /usr/local/gradle-2.14.1
-ENV PATH ${GRADLE_HOME}/bin:${PATH}
-
 # For gradle
 ENV TERM dumb
 
-# Download file, verify checksum, extract archive, remove archive, print gradle version
-RUN curl -O $GRADLE_BIN_URL && \
-	(BASENAME=`basename $GRADLE_BIN_URL`; \
-	echo "${GRADLE_BIN_CHECKSUM} *${BASENAME}" | sha1sum --strict -c - && \
-	unzip -q $BASENAME -d /usr/local && \
-	rm $BASENAME) && \
-	gradle -v
+# We don't install gradle here.
+# Instead, the project repository contains the "gradle wrapper"
+# Which automatically downloads the correct version of gradle
 
+# Load licenses
+COPY licences $ANDROID_HOME
